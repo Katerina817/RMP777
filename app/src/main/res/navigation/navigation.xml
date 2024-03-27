@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/FirstNav">
+    <fragment
+        tools:layout="@layout/first_fragment"
+        android:id="@+id/FirstNav"
+        android:label="Blank"
+        android:name="com.example.rmp777.UI.FirstFragmentUI"
+    >
+        <action
+            android:id="@+id/action_FirstNav_to_ThirdNav"
+            app:destination="@id/ThirdNav" />
+        <action
+            android:id="@+id/action_FirstNav_to_SecondNav"
+            app:destination="@id/SecondNav" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/second_fragment"
+        android:id="@+id/SecondNav"
+        android:label="Blank"
+        android:name="com.example.rmp777.UI.SecondFragmentUI"
+        >
+        <action
+            android:id="@+id/action_SecondNav_to_FirstNav"
+            app:destination="@id/FirstNav" />
+        <action
+            android:id="@+id/action_SecondNav_to_ThirdNav"
+            app:destination="@id/ThirdNav" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/third_fragment"
+        android:id="@+id/ThirdNav"
+        android:label="Blank"
+        android:name="com.example.rmp777.UI.ThirdFragmentUI"
+        >
+        <action
+            android:id="@+id/action_ThirdNav_to_FirstNav"
+            app:destination="@id/FirstNav" />
+        <action
+            android:id="@+id/action_ThirdNav_to_SecondNav"
+            app:destination="@id/SecondNav" />
+    </fragment>
+
+</navigation>
